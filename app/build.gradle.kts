@@ -92,5 +92,10 @@ dependencies {
     implementation(libs.serialization.converter)
     implementation(libs.coil)
 
+    // Runtime
+    implementation("androidx.compose.runtime:runtime-livedata:1.5.3")
+    implementation ("com.google.accompanist:accompanist-permissions:0.31.0-alpha")
+
+
 
 }

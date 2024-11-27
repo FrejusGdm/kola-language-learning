@@ -34,7 +34,7 @@ Kola (derived from "Koala") is a language learning app focused on speaking pract
 3. Progress tracking
 
 
-![FlowchartOfTheApp.png](picForMarkdown/flowchartOfTheApp.png)
+![FlowchartOfTheApp.png](/picForMarkdown/flowchartOfTheApp.png)
 
 ## Design Philosophy
 - Simple yet polished UI

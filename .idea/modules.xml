@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/kola-language-learning.iml" filepath="$PROJECT_DIR$/.idea/kola-language-learning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/kola-language-learning.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/kola-language-learning.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/kola-language-learning.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/kola-language-learning.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/kola-language-learning.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/kola-language-learning.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/kola-language-learning.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/kola-language-learning.app.unitTest.iml" />
     </modules>
   </component>
 </project>

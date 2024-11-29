@@ -8,6 +8,7 @@ plugins {
     alias(libs.plugins.kotlin.kapt)
     alias(libs.plugins.hilt.gradle)
     alias(libs.plugins.kotlin.serialization)
+
 }
 
 android {
@@ -25,6 +26,15 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+//        // Safely retrieve the OPENAI_API_KEY
+//        val openAiApiKey: String? = project.extra["OPENAI_API_KEY"] as String?
+//        if (openAiApiKey.isNullOrEmpty()) {
+//            throw GradleException("OPENAI_API_KEY is not defined in local.properties")
+//        }
+        buildConfigField("String", "OPENAI_API_KEY", "\"${System.getenv("OPENAI_API_KEY")}\"")
+
+//        buildConfigField("String", "OPENAI_API_KEY", "\"$openAiApiKey\"")
     }
 
     buildTypes {
@@ -34,7 +44,21 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+
+//            debug {
+//                println("OPENAI_API_KEY from env: ${System.getenv("OPENAI_API_KEY")}")
+//                buildConfigField("String", "OPENAI_API_KEY", "\"${System.getenv("OPENAI_API_KEY")}\"")
+//            }
         }
+        buildTypes {
+            debug {
+                buildConfigField("String", "OPENAI_API_KEY", "\"${System.getenv("OPENAI_API_KEY")}\"")
+            }
+            release {
+                buildConfigField("String", "OPENAI_API_KEY", "\"${System.getenv("OPENAI_API_KEY")}\"")
+            }
+        }
+
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -45,6 +69,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
@@ -66,6 +91,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.multidex)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

@@ -1,3 +1,5 @@
+import java.util.Properties
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
     alias(libs.plugins.android.application) apply false
@@ -12,3 +14,18 @@ plugins {
     alias(libs.plugins.kotlin.serialization) apply false
 
 }
+
+
+//val localProperties = Properties()
+//val localPropertiesFile = rootDir.resolve("local.properties")
+//if (localPropertiesFile.exists()) {
+//    localPropertiesFile.inputStream().use { localProperties.load(it) }
+//}
+//
+//// Ensure the OPENAI_API_KEY is loaded into the extra properties
+//extra["OPENAI_API_KEY"] = localProperties["OPENAI_API_KEY"] ?: throw GradleException("OPENAI_API_KEY not found in local.properties")
+
+
+
+
+

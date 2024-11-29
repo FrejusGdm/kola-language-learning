@@ -14,7 +14,7 @@ fun NavGraph(
 ) {
     NavHost(
         navController = navController,
-        startDestination = Screen.Auth.route
+        startDestination = Screen.Home.route
     ) {
 //        composable(Screen.Auth.route) {
 //            AuthScreen(

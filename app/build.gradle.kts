@@ -45,10 +45,6 @@ android {
                 "proguard-rules.pro"
             )
 
-//            debug {
-//                println("OPENAI_API_KEY from env: ${System.getenv("OPENAI_API_KEY")}")
-//                buildConfigField("String", "OPENAI_API_KEY", "\"${System.getenv("OPENAI_API_KEY")}\"")
-//            }
         }
         buildTypes {
             debug {
